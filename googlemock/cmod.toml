@@ -1,0 +1,26 @@
+[package]
+name = "googlemock"
+version = "1.17.0"
+edition = "2023"
+description = "Google Mock - C++ mocking framework"
+authors = ["Google Inc."]
+license = "BSD-3-Clause"
+
+[dependencies]
+googletest = { path = "../googletest" }
+
+[toolchain]
+compiler = "clang"
+cxx_standard = "20"
+
+[build]
+type = "static-lib"
+include_dirs = ["include", ""]
+exclude = [
+    "gmock-cardinalities.cc",
+    "gmock-internal-utils.cc",
+    "gmock-matchers.cc",
+    "gmock-spec-builders.cc",
+    "gmock.cc",
+    "gmock_main.cc",
+]

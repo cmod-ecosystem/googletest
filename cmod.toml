@@ -1,0 +1,10 @@
+[package]
+name = "github.com/google/googletest"
+version = "1.17.0"
+edition = "2023"
+description = "Google Test and Mock - C++ testing framework"
+authors = ["Google Inc."]
+license = "BSD-3-Clause"
+
+[workspace]
+members = ["googletest", "googlemock"]

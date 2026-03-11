@@ -1,0 +1,27 @@
+[package]
+name = "googletest"
+version = "1.17.0"
+edition = "2023"
+description = "Google Test - C++ testing framework"
+authors = ["Google Inc."]
+license = "BSD-3-Clause"
+
+[toolchain]
+compiler = "clang"
+cxx_standard = "20"
+
+[build]
+type = "static-lib"
+include_dirs = ["include", ""]
+exclude = [
+    "gtest.cc",
+    "gtest-assertion-result.cc",
+    "gtest-death-test.cc",
+    "gtest-filepath.cc",
+    "gtest-matchers.cc",
+    "gtest-port.cc",
+    "gtest-printers.cc",
+    "gtest-test-part.cc",
+    "gtest-typed-test.cc",
+    "gtest_main.cc",
+]
