@@ -6,5 +6,29 @@ description = "Google Test and Mock - C++ testing framework"
 authors = ["Google Inc."]
 license = "BSD-3-Clause"
 
-[workspace]
-members = ["googletest", "googlemock"]
+[toolchain]
+compiler = "clang"
+cxx_standard = "20"
+
+[build]
+type = "static-lib"
+sources = ["googletest/src", "googlemock/src"]
+include_dirs = ["googletest/include", "googletest", "googlemock/include", "googlemock"]
+exclude = [
+    "gtest.cc",
+    "gtest-assertion-result.cc",
+    "gtest-death-test.cc",
+    "gtest-filepath.cc",
+    "gtest-matchers.cc",
+    "gtest-port.cc",
+    "gtest-printers.cc",
+    "gtest-test-part.cc",
+    "gtest-typed-test.cc",
+    "gtest_main.cc",
+    "gmock-cardinalities.cc",
+    "gmock-internal-utils.cc",
+    "gmock-matchers.cc",
+    "gmock-spec-builders.cc",
+    "gmock.cc",
+    "gmock_main.cc",
+]
