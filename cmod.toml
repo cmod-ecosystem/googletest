@@ -9,7 +9,7 @@ name = "com.github.cmod_ecosystem.googletest"
 root = "src/lib.cppm"
 
 [dependencies]
-"github.com/cmod-ecosystem/abseil-cpp" = "*"
+"github.com/cmod-ecosystem/abseil-cpp" = { branch = "cmod-support" }
 
 [dev-dependencies]
 
